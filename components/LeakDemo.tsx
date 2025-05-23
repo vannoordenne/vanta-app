@@ -1487,7 +1487,7 @@ export default function LeakDemo() {
     setRegisteredUsers(prev => prev.map(user => {
       if (user.id === currentUserId) {
         // Combine existing interests with new ones found in status
-        const updatedInterests = [...new Set([...user.interests, ...newInterests])];
+        const updatedInterests = Array.from(new Set([...user.interests, ...newInterests]));
         
         return {
           ...user,
@@ -1506,7 +1506,7 @@ export default function LeakDemo() {
       const updatedUser = {
         ...currentUser,
         statuses: [...(currentUser.statuses || []), newStatus],
-        interests: [...new Set([...currentUser.interests, ...newInterests])]
+        interests: Array.from(new Set([...currentUser.interests, ...newInterests]))
       };
       const updatedPosts = generatePersonalizedPosts(updatedUser);
       setPosts(updatedPosts);
