@@ -6,8 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/vanta-ap' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/vanta-ap/' : '',
+  basePath: '/vanta-app',
+  assetPrefix: '/vanta-app/',
 };
 
 export default nextConfig; 
