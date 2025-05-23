@@ -426,7 +426,7 @@ const generateDigitalFootprint = (user: RegisteredUser): string => {
   }
   
   // Combine and select random platforms
-  const allPlatforms = [...new Set([...platforms, ...interestBasedPlatforms])];
+  const allPlatforms = Array.from(new Set([...platforms, ...interestBasedPlatforms]));
   const selectedPlatforms = allPlatforms.slice(0, Math.floor(Math.random() * 3) + 3);
   
   const accountData = selectedPlatforms.map(platform => {
