@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Vanta - Share what matters",
   description: "Een demonstratie van digitale privacy en dataverzameling",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
